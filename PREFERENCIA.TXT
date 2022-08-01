@@ -1,0 +1,2 @@
+De los 3  motores de plantillas vistos elegiría EJS, me parece el más versátil y de implementación más sencilla, sobre todo si ya está el html armado, ya que casi no se requiere modificarlo.
+En caso de tener que armar la plantilla de cero, tal vez elegiría PUG por lo sintaxis simple.

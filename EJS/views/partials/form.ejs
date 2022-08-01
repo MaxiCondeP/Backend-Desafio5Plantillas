@@ -1,0 +1,19 @@
+<form action="http://localhost:8080/api/productos" method="post">
+  <div class="mb-3">
+     <label for="title">Nombre del producto: </label>
+     <input type="text" class="form-control" name="title">
+    <div class="form-text">Ingrese el nombre del producto</div>
+  </div>
+  <div class="mb-3">
+    <label for="price">Precio: </label>
+    <input type="number" class="form-control" name="price">
+    <div class="form-text">Ingrese el precio del producto</div>
+  </div>
+  <div class="mb-3 ">
+     <label for="thumbnail"> Imagen: </label>
+     <input type="text" class="form-control"  name="thumbnail">
+     <div class="form-text">Ingrese el link a la imagen del producto</div>
+  </div>
+  <button type="submit" class="btn btn-primary">Guardar </button>
+  <a href="http://localhost:8080/api/productos"><button type="button" class="btn btn-primary">Ver Productos</button></a>
+</form>

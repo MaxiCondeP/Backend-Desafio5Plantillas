@@ -1,0 +1,29 @@
+html 
+    head   
+        //- Bootstrap CSS
+        link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" 
+            rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" 
+            crossorigin="anonymous")
+        link(rel="stylesheet" 
+            href="/style.css")
+        title="Productos"   
+    body 
+        h2="Carga de productos"
+        div(class="container")
+            form(action="http://localhost:8080/api/productos" method="post")
+                div(class="mb-3")
+                    label(for="title")="Nombre del producto:"
+                    input(type="text" class="form-control"  name="title")
+                    div(class="form-text") Ingrese el nombre del producto
+                div(class="mb-3")
+                    label(for="price")="Precio:"
+                    input(type="number" class="form-control"  name="price")
+                    div(class="form-text") Ingrese el precio del producto
+                div(class="mb-3")
+                    label(for="thumbnail")="Imagen:"
+                    input(type="text" class="form-control"  name="thumbnail")
+                    div(class="form-text") Ingrese el link a la imagen del producto
+                button(type="submit" class="custButton btn btn-primary")="Guardar"
+                a(href="http://localhost:8080/api/productos")
+                    button(type="button" class="custButton btn btn-primary")="Ver Productos"
+

@@ -1,0 +1,32 @@
+html 
+    head   
+        //- Bootstrap CSS
+        link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" 
+            rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" 
+            crossorigin="anonymous")
+        link(rel="stylesheet" 
+            href="/style.css")
+        title="Productos"   
+    body 
+        h2="Lista de productos"
+        div(class="container")
+            if products.length!=0
+                table(class="table table-dark table-hover")
+                    thead
+                    tr
+                        th(scope="col") ID
+                        th(scope="col") Nombre
+                        th(scope="col") Precio
+                        th(scope="col") Imagen
+                    tbody   
+                    each prod in products
+                        tr
+                            th(scope="row")=prod.id
+                                td=prod.title
+                                td=prod.price
+                                td 
+                                    img(class= "icon" src=prod.thumbnail alt="")   
+            else   
+                h2="No hay productos"  
+            a(href="http://localhost:8080/")
+                button(type="button" class="btn btn-primary")="Volver al formulario"
